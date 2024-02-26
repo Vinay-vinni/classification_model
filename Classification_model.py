@@ -199,7 +199,10 @@ if st.button("Check here"):
      clicked_str = str(clicked[0])
 
      st.subheader("Add clicked or not :")
-     st.subheader(clicked_str)
+    if clicked_str==0:
+        print("Ad Not Clicked")
+    else:
+        print("Ad Clicked")
 
 
  
