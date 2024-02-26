@@ -197,12 +197,10 @@ if st.button("Check here"):
      record_values =record.values
      clicked = model.predict(data_pca_array)
      clicked_str = str(clicked[0])
+     clicked_str = {1: "Ad Clicked", 0: "Ad Not Clicked"}[clicked[0]]  # Corrected here
 
      st.subheader("Add clicked or not :")
-     if clicked_str==0:
-         print("Ad Not Clicked")
-     else:
-         print("Ad Clicked")
+     st.subheader(clicked_str)
 
 
  
